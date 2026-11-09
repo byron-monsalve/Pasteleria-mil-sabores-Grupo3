@@ -41,7 +41,7 @@ export const AdminView: React.FC<AdminViewProps> = ({
     if (saved) return JSON.parse(saved);
     return [
       {
-        correo: 'admin@pasteleria.cl',
+        correo: 'admin@gmail.cl',
         nombre: 'Administrador Principal',
         rol: 'Admin',
         telefono: '+56 9 1234 5678',
