@@ -7,12 +7,12 @@ import { AboutView } from './views/AboutView';
 import { BlogsView } from './views/BlogsView';
 import { CartView } from './views/CartView';
 import { CheckoutView, type OrderData } from './views/CheckoutView';
-import { PaymentSuccessView } from './views/PaymentSuccessView';
-import { PaymentErrorView } from './views/PaymentErrorView';
-import { ContactView } from './views/ContactView';
-import { LoginView } from './views/LoginView';
-import { ProfileView } from './views/ProfileView';
-import { AdminView } from './views/AdminView';
+import {PaymentSuccessView} from './views/PaymentSuccessView';
+import {PaymentErrorView} from './views/PaymentErrorView';
+import {ContactView} from './views/ContactView';
+import {LoginView} from './views/LoginView';
+import {ProfileView} from './views/ProfileView';
+import {AdminView} from './views/AdminView';
 import { productService, type Product, type CartItem } from './data/productService';
 
 const CART_STORAGE_KEY = 'PASTELERIA_MIL_SABORES_CART';
