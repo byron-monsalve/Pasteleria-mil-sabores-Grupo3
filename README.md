@@ -1,75 +1,78 @@
-# React + TypeScript + Vite
+Markdown
+# Pastelería Mil Sabores
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Plataforma web para la pastelería tradicional **Mil Sabores**, desarrollada con **React**, **TypeScript** y **Vite**. La aplicación permite explorar el catálogo de productos por categorías, consultar detalles específicos, gestionar un carrito de compras interactivo, acceder a contenido informativo de la marca, todo respaldado por persistencia local y pruebas unitarias automatizadas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Características Principales
 
-## React Compiler
+* **Catálogo Dinámico y Persistencia:** Carga inicial de productos con soporte para persistencia en `localStorage`, garantizando disponibilidad de datos sin depender de un backend externo.
+* **Componentes Reutilizables y Modulares:** Tarjetas de productos simétricas, barra de navegación institucional y vistas desacopladas.
+* **Experiencia de Usuario y Diseño:** Paleta cromática corporativa, tipografías temáticas y maquetación responsiva apoyada en Bootstrap 5.
+* **Secciones Informativas:** Reseña histórica de los 50 años de tradición, registro fotográfico de hitos, blog con recetas destacadas y formulario de contacto.
+* **Flujo Transaccional:** Carrito de compras en tiempo real, resumen de pedidos y emisión de comprobantes.
+* **Garantía de Calidad:** Pruebas unitarias integradas con Vitest y React Testing Library para componentes críticos.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Stack Tecnológico
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Core:** React 19, TypeScript
+* **Herramienta de Construcción:** Vite
+* **Diseño y Estilos:** Bootstrap 5.3, CSS3 Custom Properties
+* **Testing:** Vitest, React Testing Library, `@testing-library/jest-dom`
+* **Control de Versiones:** Git & GitHub
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📁 Estructura del Proyecto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 
-```
+```text
+pasteleria-mil-sabores/
+├── public/                     # Recursos multimedia estáticos (imágenes del catálogo y registros)
+├── src/
+│   ├── assets/                 # Recursos gráficos vectoriales e íconos SVG
+│   ├── components/
+│   │   ├── common/             # Componentes transversales y reutilizables (ej. ProductCard)
+│   │   └── layout/             # Componentes estructurales de interfaz (ej. Navbar)
+│   ├── data/                   # Servicios de datos, modelos y lógica de almacenamiento local
+│   ├── views/                  # Vistas principales de la aplicación (Inicio, Nosotros, Blogs, etc.)
+│   ├── App.css                 # Reglas de maquetación y contenedores globales
+│   ├── App.tsx                 # Enrutamiento y orquestación general de la aplicación
+│   ├── index.css               # Variables de estilo, fuentes institucionales y normalización
+│   ├── main.tsx                # Punto de entrada de la aplicación
+│   └── setupTests.ts           # Configuración global del entorno de pruebas
+├── package.json                # Definición de dependencias y scripts del proyecto
+├── tsconfig.app.json           # Configuración de compilación TypeScript
+└── vite.config.ts              # Configuración del entorno Vite y suite Vitest
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+⚙️ Instalación y Uso
+Clonar el repositorio:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Bash
+git clone [https://github.com/byron-monsalve/Pasteleria-mil-sabores-Grupo3.git](https://github.com/byron-monsalve/Pasteleria-mil-sabores-Grupo3.git)
+cd Pasteleria-mil-sabores-Grupo3
+Instalar dependencias:
 
-```
+Bash
+npm install
+Ejecutar en entorno de desarrollo:
+
+Bash
+npm run dev
+Compilar para producción:
+
+Bash
+npm run build
+🧪 Pruebas Unitarias
+Para ejecutar la suite de pruebas automatizadas:
+
+Bash
+npm test --run
+Para correr las pruebas en modo observador (watch):
+
+Bash
+npm test
